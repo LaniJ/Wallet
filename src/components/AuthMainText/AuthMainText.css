@@ -1,0 +1,17 @@
+.hero-section__text {
+    margin-top: 6.4rem;
+  }
+.hero-section__text h2 {
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 48px;
+  color: #0B2253;
+  margin-bottom: 24px;
+}
+
+.hero-section__text h3 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: #B3BECF;
+}

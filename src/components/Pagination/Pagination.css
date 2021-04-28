@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.8rem;
+    padding-left: 1.2rem ;
+}
+.allPages {
+    display: flex;
+    padding-right: 1.6rem;
+    align-items: center;
+}
+.currentPage h3,
+.footer-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #3A434B;
+    margin-right: 0.8rem;
+    background: none;
+    border: none;
+    padding: 0 0.8rem;
+}
+.footer-text {
+    cursor: pointer;
+}
+.footer-text:hover {
+    color: #2F2E80;
+    background: rgba(47, 46, 128, 0.1);
+    border-radius: 2px;
+}
+.ellipsis {
+    color: #677684;
+    margin-right: 0.8rem;
+}

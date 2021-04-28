@@ -1,0 +1,63 @@
+.createAccount{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+.nav {
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+}
+.nav__logo {
+  height: 4rem;
+}
+.hero-section {
+display: flex;
+justify-content: space-between;
+margin-top: 10rem;
+}
+
+.hero-section__text {
+    margin-top: 6.4rem;
+  }
+.hero-section__text h2 {
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 48px;
+  color: #0B2253;
+  margin-bottom: 24px;
+}
+
+.hero-section__text h3 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: #B3BECF;
+  max-width: 48rem;
+}
+
+.hero-section__form {
+  width: 528px;
+  align-items: center;
+  padding: 4rem 3.2rem;
+  border: 1px solid #DEE3EB;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 5rem;
+}
+.sign-in {
+  text-align: left;
+  margin-top: 24px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color:  #6D7A98;
+}
+.sign-in a {
+  color: #1F6AEC;
+  font-weight: 500;
+}
+.sign-in a:hover {
+  color:  #00070F;
+}

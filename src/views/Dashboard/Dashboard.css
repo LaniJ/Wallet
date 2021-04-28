@@ -1,0 +1,158 @@
+.Dashboardwrapper {
+    display: flex;
+}
+.main-page {
+    width: calc(100vw - 24.8rem);
+    padding: 2.4rem 3.2rem 8rem 3.2rem;
+    background-color: #ffffff;
+}
+.gap {
+    margin-right: 2rem;
+}
+.page-header__bottomContent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+    margin-top: 3.2rem;
+} 
+.page-header__text2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.25px;
+    color: #0B2253;
+}
+.page-header__buttons {
+    display: flex;
+}
+/*  */
+.addBtn {
+    margin-right: 0.8rem;
+}
+.addBtn path {
+    fill: #fff;
+}
+.balance-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+.balance-section__naira h3 {
+    /* padding: 2.4rem 2.4rem 0.8rem ; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #0B2253;
+    margin-bottom: 0.8rem;
+}
+.balance-section__naira {
+    background: #FFFFFF;
+    border: 1px solid #DEE3EB;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 50%;
+    padding: 2.4rem;
+    }
+.balance-section__naira:first-of-type {
+    margin-right: 1.2rem;
+}
+.balance-section__naira:last-of-type {
+    margin-left: 1.2rem;
+}
+.table-section h3 {
+    margin-bottom: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0B2253
+}
+
+.balance-type,
+.currency-type label,
+.status-type label {
+    /* font-style: normal; */
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #6D7A98;
+    margin-bottom: 2.4rem;
+    margin-right: 2.4rem;
+}
+.currency {
+    display: flex;
+}
+/* .modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(13, 15, 17, 0.3);
+    backdrop-filter: blur(1px);
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+} */
+/* .modal.open {
+    visibility: visible;
+    opacity: 1;
+} */
+.form {
+    margin-right: 3.2rem;
+}
+/* .modal__transfer,
+.modal__fund {
+    width: 49.6rem;
+    background: #fff;
+    transform: translateX(40%);
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+} */
+/* .modal.open .modal__transfer,
+.modal.open .modal__fund {
+    opacity: 1;
+    transform: translateX(0);
+}
+.modal__transfer__header,
+.modal__fund__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem 3.2rem;
+    align-items: center;
+    border: 1px solid #D7DCE0;
+}*/
+.modal__transfer__header h2,
+.modal__fund__header h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #0B2253;
+} 
+/* .modal__transfer__body h3,
+.modal__fund__body h3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.002em;
+    color: #0B2253;
+    margin-bottom: 1.6rem;
+}
+.modal__transfer__body,
+.modal__fund__body {
+    padding-top: 4rem;
+    padding-left: 3.2rem;
+}
+.modalBtn {
+    background: none;
+    margin: none;
+    border: none;
+    cursor: pointer;
+} */
