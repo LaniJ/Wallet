@@ -6,7 +6,7 @@
 }
 .allPages {
     display: flex;
-    padding-right: 1.6rem;
+    /* padding-right: 1.6rem; */
     align-items: center;
 }
 .currentPage h3,
@@ -24,12 +24,31 @@
 .footer-text {
     cursor: pointer;
 }
-.footer-text:hover {
+.footer-text {
     color: #2F2E80;
+    /* background: rgba(47, 46, 128, 0.1); */
+    /* border-radius: 2px; */
+}
+.footer-text:hover,
+.footer-text.active {
+    /* color: #2F2E80; */
     background: rgba(47, 46, 128, 0.1);
     border-radius: 2px;
 }
+/* .footer-text.active{
+    color: #2F2E80;
+    background: rgba(47, 46, 128, 0.1);
+    border-radius: 2px;
+} */
 .ellipsis {
     color: #677684;
     margin-right: 0.8rem;
+}
+
+button:disabled {
+    color: gray;
+    cursor: default;
+}
+button:disabled:hover {
+    background-color: transparent;
 }

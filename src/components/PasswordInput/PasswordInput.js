@@ -4,6 +4,7 @@ export default {
     return {
       showPassword: false,
       passwordType: 'password',
+      innerValue: '',
     };
   },
   props: {
@@ -14,6 +15,19 @@ export default {
     hasError: {
       type: Boolean,
       default: false,
+    },
+    value: {
+      type: String,
+    },
+    name: {
+      type: String,
+    },
+    rules: {
+      type: String,
+    },
+    vid: {
+      type: String,
+      default: '',
     },
   },
   computed: {
@@ -32,5 +46,21 @@ export default {
       //  this.type = this.passwordType;
       this.showPassword = !this.showPassword;
     },
+  },
+  watch: {
+    innerValue(val) {
+      this.$emit('input', val);
+      this.$emit('change', val);
+    },
+    value(val) {
+      if (val !== this.innerValue) {
+        this.innerValue = val;
+      }
+    },
+  },
+  created() {
+    if (this.value) {
+      this.innerValue = this.value;
+    }
   },
 };

@@ -30,16 +30,16 @@
     border: 1px solid #1F6AEC;;
 }
 .input__error {
-    border: 1px solid red;
+    border: 1px solid #CA1B1B;
     /* outline: none; */
   }
 .invalid {
     font-size: 10px;
-    margin-bottom: 5px;
-    color: red;
+    margin-bottom: 20px;
+    color: #CA1B1B;
 }
 .input__error:focus {
-    border: 1px solid red;;
+    border: 1px solid #CA1B1B;
 }
 ::placeholder {
   font-weight: normal;

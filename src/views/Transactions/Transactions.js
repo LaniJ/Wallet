@@ -6,9 +6,10 @@ import CustomInput from '@/components/Input';
 import CustomButton from '@/components/Button';
 import Modal from '@/components/Modal';
 import Pagination from '@/components/Pagination';
+import Transactions from '@/tableData/tableData';
 
 export default {
-  name: 'Dashboard',
+  name: 'Transactions',
   components: {
     Sidenavbar,
     MainHeader,
@@ -22,14 +23,24 @@ export default {
   data() {
     return {
       filter: false,
-    //   showModal: true,
-      // openTransferModal: true,
-    //   openFundModal: true,
+      currentPage: 1,
+      perPage: 8,
+      transactions: Transactions,
     };
   },
   methods: {
     toggleFilterModal() {
       this.filter = !this.filter;
+    },
+    changeCurrentPage(page) {
+      this.currentPage = page;
+    },
+  },
+  computed: {
+    paginatedTransactions() {
+      const from = (this.perPage * this.currentPage) - this.perPage;
+      const to = from + this.perPage;
+      return this.transactions.slice(from, to);
     },
   },
 };

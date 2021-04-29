@@ -1,14 +1,14 @@
 <template>
   <Auth mainText="Reset Password" subText="Create a unique password to keep your account protected">
     <div class="hero-section__formContent">
+      <ValidationObserver slim v-slot="{ invalid }">
         <form action @submit.prevent="">
-            <PasswordInput title="New Password"/>
-            <PasswordInput title="Confirm Password"/>
-            <!-- <CustomInput title="Password" placeholder="•••••••••" type="password" />
-            <CustomInput title="Password" placeholder="•••••••••" type="password" /> -->
+            <PasswordInput title="New Password" name="Password" rules="required|alpha_dash|min:7|confirmed:confirmation"/>
+            <PasswordInput title="Confirm Password" name="Confirm password" rules="required|alpha_dash|min:7" vid="confirmation"/>
 
-            <CustomButton size="large">Reset Password</CustomButton>
+            <CustomButton size="large" :disabled="invalid">Reset Password</CustomButton>
         </form>
+      </ValidationObserver>
     </div>
   </Auth>
 </template>
