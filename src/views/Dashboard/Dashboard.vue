@@ -1,14 +1,8 @@
 <template>
 <div>
     <div class="Dashboardwrapper">
-        <div class="overlay" @click="toggleSideNav"></div>
-        <!-- <div> -->
-            <!-- <div id="navigation-icon" v-if="mobileView">
-                <span @click="toggleSideNav">&#9776;</span>
-            </div> -->
-            <!-- <MobileSidebar /> -->
+        <div class="overlay" @click="toggleSideNav" v-if="sideNavActive"></div>
             <Sidenavbar :show="sideNavActive" @close="toggleSideNav"/>
-        <!-- </div> -->
         <div class="main-page">
             <div class="flex">
                 <div id="navigation-icon">
@@ -61,7 +55,7 @@
                         <div class="form">
                             <CustomInput :title="'Account Number'" :placeholder="'23456788901'" :type="'tel'" />
                             <CustomInput :title="'Amount'" :placeholder="'₦ 00.00'" :type="'tel'" />
-                            <CustomButton size="large">Transfer</CustomButton>
+                            <CustomButton size="large" class="btn-media">Transfer</CustomButton>
                         </div>
                     </form>
                 </div>
@@ -79,7 +73,7 @@
                     <form action="" @submit.prevent="">
                         <div class="form">
                             <CustomInput title="Amount" placeholder="₦ 00.00" type="tel" />
-                            <CustomButton size="large">Fund Wallet</CustomButton>
+                            <CustomButton size="large" class="btn-media">Fund Wallet</CustomButton>
                         </div>
                     </form>
                 </div>

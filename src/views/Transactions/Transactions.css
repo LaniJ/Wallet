@@ -1,6 +1,10 @@
 .Dashboardwrapper {
     display: flex;
 }
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
 .main-page {
     width: calc(100vw - 24.8rem);
     padding: 2.4rem 3.2rem 3.90em 3.2rem;
@@ -17,7 +21,7 @@
 } 
 .page-header__text2 {
     font-style: normal;
-    font-weight: 1000;
+    font-weight: 600;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 0.25px;
@@ -25,9 +29,9 @@
 }
 .page-header__buttons {
     display: flex;
-}
-.page-header__buttons {
-    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-left: 9rem
 }
 .date-section {
     display: flex;
@@ -63,43 +67,31 @@
     align-items: center;
     margin-right: 1rem;
     justify-content: space-between;
+    position: relative;
 }
 .search-group__section {
     margin-right: 2rem;
+    max-width: 40rem;
 }
 .date-group__section__input,
 .search-group__section__input {
     border: none;
     outline: none;
 }
+/* .date-group__section__input img {
+    position: absolute;
+    right: 0;
+} */
+/* .search-group__section__input {
+    width: 40rem;
+} */
 .date-group__section__input input {
-    /* font-weight: 600; */
     font-size: 16px;
     line-height: 16px;
     display: flex;
     align-items: center;
     letter-spacing: -0.05px;
     color: #0B2253;
-}
-.search-group__section__input {
-    width: 40rem;
-}
-
-.filter-button  {
-    /* box-sizing: border-box;
-    background: #FFFFFF;
-    border: 1px solid #1F6AEC;
-    box-sizing: border-box;
-    border-radius: 8px;
-    padding: 1.2rem 2.4rem;
-    line-height: 24px; */
-    /* width: 16.7rem; */
-    /* text-align: center;
-    letter-spacing: 0.2px;
-    font-weight: 500;
-    font-size: 16px;
-    color: #1F6AEC;
-    cursor: pointer; */
 }
 .filter-button  {
     border: 1px solid #D7DCE0;
@@ -212,11 +204,12 @@
 }
 
 .modal__filter {
-    width: 49.6rem;
+    max-width: 49.6rem;
     background: #fff;
     transform: translateX(40%);
     opacity: 0;
     transition: all 300ms ease-in-out;
+    width: 100%;
 }
 
 .modal.open .modal__filter {
@@ -256,4 +249,65 @@
     margin: none;
     border: none;
     cursor: pointer;
+}
+#navigation-icon {
+    display: none;
+}
+.removeWidth {
+    width: unset;
+}
+
+@media screen and (max-width: 768px) {
+    .Dashboardwrapper {
+        display: grid;
+        position: relative;
+    }
+    .main-page {
+        width: 100vw;
+    }
+    .page-header__transactions {
+        display: block;
+    } 
+    .page-header__text2 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+    .page-header__buttons {
+        display: flex;
+        margin-top: 3rem;
+    }
+    #navigation-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 1rem 1rem 2rem;
+    }
+    .date-section {
+        display: grid;
+    }
+    .date-group {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .date-group:first-of-type,
+    .date-group:last-of-type {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .date-group__section {
+        margin-top: 0;
+    }
+    .overlay {
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(255,255,255, 0.3);
+        z-index: 1;
+        backdrop-filter: blur(1px);
+        width: 100%;
+        height: 100vh;
+    }
 }

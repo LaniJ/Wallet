@@ -1,6 +1,6 @@
 <template>
     <!-- bind class to sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" :class="{ show }">
         <div class="sidebar-wrapper">
             <div class="sidebar__header">
                 <h1>
@@ -47,7 +47,7 @@
                         </router-link>
                     </li>
                     <li>
-                        <router-link to="/profile" exact>
+                        <router-link to="#" exact>
                             <span>
                                 <img src="@/assets/profile.svg" alt="">
                             </span>

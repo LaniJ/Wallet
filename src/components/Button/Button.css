@@ -51,3 +51,9 @@
     color: #fff;
     /* pointer-events: none; */
 }
+
+@media screen and (max-width: 768px) {
+    .btn-media {
+        margin-top: 2rem;
+    }
+}

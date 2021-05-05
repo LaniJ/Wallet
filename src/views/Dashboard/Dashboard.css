@@ -100,9 +100,7 @@
     color: #0B2253;
 }
 #navigation-icon {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 1rem 1rem 2rem;
+    display: none;
 }
 .active {
     width: 24.8rem;
@@ -112,15 +110,18 @@
 }
 
 @media screen and (max-width: 768px) {
-    /* .sidebar {
-      width: 100%;
-    } */
     .Dashboardwrapper {
         display: grid;
         position: relative;
     }
     .Dashboardwrapper {
         display: flex;
+    }
+    #navigation-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 1rem 1rem 2rem;
     }
     .main-page {
         width: 100%;

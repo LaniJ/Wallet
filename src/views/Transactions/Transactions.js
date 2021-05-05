@@ -26,6 +26,7 @@ export default {
       currentPage: 1,
       perPage: 8,
       transactions: Transactions,
+      sideNavActive: false,
       totalPages: 10,
       status: 'successful',
       transactionStatus: [
@@ -46,6 +47,9 @@ export default {
     },
     changeCurrentPage(page) {
       this.currentPage = page;
+    },
+    toggleSideNav() {
+      this.sideNavActive = !this.sideNavActive;
     },
   },
   computed: {

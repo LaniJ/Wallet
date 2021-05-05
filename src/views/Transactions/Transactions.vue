@@ -1,9 +1,15 @@
 <template>
     <div>
         <div class="Dashboardwrapper">
-                <Sidenavbar />
+            <div class="overlay" @click="toggleSideNav" v-if="sideNavActive"></div>
+                <Sidenavbar :show="sideNavActive" @close="toggleSideNav"/>
             <div class="main-page">
-                <MainHeader/>
+                <div class="flex">
+                    <div id="navigation-icon">
+                        <span @click="toggleSideNav">&#9776;</span>
+                    </div>
+                    <MainHeader/>
+                </div>
                 <div class="page-header__transactions">
                     <div>
                         <h3 class="page-header__text2">Transactions </h3>
@@ -13,7 +19,7 @@
                             <input class="search-group__section__input" type="text" placeholder="Search by name">
                             <img src="@/assets/search-icon.svg" alt="filter icon">
                         </div>
-                        <CustomButton size="large" color="light" @click="toggleFilterModal">
+                        <CustomButton size="large" color="light" class="removeWidth" @click="toggleFilterModal">
                             <span class="filter-button__text">
                                 Filter
                             </span>
@@ -61,7 +67,7 @@
                                 name="transaction-status"
                                 v-model="status"/>
                             </div>
-                            <CustomButton size="large">Apply Search</CustomButton>
+                            <CustomButton size="large" class="btn-media">Apply Search</CustomButton>
                         </div>
                     </form>
                 </div>

@@ -29,7 +29,6 @@
 }
 .footer-text:hover,
 .footer-text.active {
-    /* color: #2F2E80; */
     background: rgba(47, 46, 128, 0.1);
     border-radius: 2px;
 }
@@ -48,4 +47,10 @@ button:disabled {
 }
 button:disabled:hover {
     background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .currentPage {
+        display: none;
+    }
 }

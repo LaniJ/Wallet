@@ -69,6 +69,7 @@ margin-top: 10rem;
   .hero-section {
     display: grid;
     margin-top: 2rem;
+    grid-template-columns: 100%;
   }
   .hero-section__text {
     margin-top: 2.4rem;
