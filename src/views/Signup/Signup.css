@@ -1,5 +1,6 @@
 .first-row__left {
   width: 50%;
+  margin-bottom: 2rem;
 }
 .first-row__left:first-of-type {
   margin-right: 8px;
@@ -28,12 +29,12 @@
   text-align: left;
   display: block;
 }
-.input {
+/* .input {
 background: #FFFFFF;
 border: 1px solid #DEE3EB;
 box-sizing: border-box;
 border-radius: 4px;
-margin-bottom: 2.4rem;
+margin-bottom: 1.4rem;
 font-size: 16px;
 line-height: 16px;
 width: 100%;
@@ -45,15 +46,45 @@ margin-top: 8px;
 font-size: 16px;
 letter-spacing: -0.05px;
 position: relative;
-/* display: block; */
-}
+display: block;
+} */
+/* 
+.input-block {
+  display: hidden;
+} */
 
 .password-input {
   position: relative;
   /* padding: 0 32px; */
 }
-.password-icon {
+/* .password-icon {
   position: absolute;
   right: 25px;
+  top: 14px;
   padding-top: 25px;
+} */
+.input-block {
+  margin-bottom: 20px;
+  /* display: none; */
+}
+
+@media screen and (max-width: 768px) {
+  .first-row__left {
+    width: 100%;
+  }
+  .first-row__left:first-of-type,
+  .first-row__left:last-of-type  {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .first-row__left {
+    margin-right: 0;
+    /* margin-bottom: 2rem; */
+  }
+  .first-row {
+    display: grid;
+  }
+  .input-block {
+    margin-bottom: 20px;
+  }
 }

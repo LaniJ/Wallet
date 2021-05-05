@@ -5,6 +5,7 @@ import RadioBtn from '@/components/RadioButton';
 import CustomInput from '@/components/Input';
 import CustomButton from '@/components/Button';
 import Modal from '@/components/Modal';
+import Transactions from '@/tableData/tableData';
 
 export default {
   name: 'Dashboard',
@@ -21,9 +22,22 @@ export default {
     return {
       isActive: false,
       fundActive: false,
-    //   showModal: true,
-      // openTransferModal: true,
-    //   openFundModal: true,
+      sideNavActive: false,
+      mobileView: true,
+      showNav: false,
+      perPage: 6,
+      recentTransactions: Transactions,
+      currencyOption: 'naira',
+      transactionType: [
+        {
+          value: 'naira',
+          title: 'Naira',
+        },
+        {
+          value: 'dollar',
+          title: 'Dollar',
+        },
+      ],
     };
   },
   methods: {
@@ -33,5 +47,21 @@ export default {
     toggleFundModal() {
       this.fundActive = !this.fundActive;
     },
+    // handleView() {
+    //   this.mobileView = window.innerWidth <= 900;
+    // },
+    toggleSideNav() {
+      this.sideNavActive = !this.sideNavActive;
+    },
   },
+  computed: {
+    dashboardTransactions() {
+      return this.recentTransactions.slice(0, 6);
+    },
+  },
+  // watch: {
+  // },
+  // created() {
+  //   this.handleView();
+  // },
 };

@@ -72,3 +72,30 @@
     color: #9D1515;
     width: 66px;
 }
+@media screen and (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .table-section {
+        overflow-x:auto;
+        /* display: none; */
+    }
+    .table__row__content {
+        font-size: 14px;
+        line-height: 16px;
+        /* display: flex; */
+        align-items: center;
+        color: #0B2253;
+        padding-left: 12px;
+        padding-top: 2.8rem;
+        padding-bottom: 2.8rem;
+        margin-top: 28px;
+    }
+    table {
+        /* table-layout: fixed; */
+        /* width: 100% ; */
+    }
+    td {
+        /* width: 25% ; */
+      }
+  } 

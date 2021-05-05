@@ -35,9 +35,10 @@
     transition: all 0.2s ease;
 }
 [type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    background: #DEE3EB;
+}
+[type="radio"]:not(:checked) + label:before {
+    border-color: #DEE3EB;
 }
 [type="radio"]:checked + label:after {
     opacity: 1;
@@ -53,4 +54,9 @@
     color: #6D7A98;
     margin-bottom: 2.4rem;
     margin-right: 2.4rem;
+}
+.status {
+    display: flex;
+    justify-content: space-between;
+    width: 24.2rem;
 }

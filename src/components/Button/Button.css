@@ -47,4 +47,7 @@
 .btn:disabled {
     cursor: not-allowed;
     background: rgb(206, 206, 206);
+    border: 1px solid #D7DCE0;
+    color: #fff;
+    /* pointer-events: none; */
 }

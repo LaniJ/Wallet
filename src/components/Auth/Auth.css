@@ -61,3 +61,35 @@ margin-top: 10rem;
 .sign-in a:hover {
   color:  #00070F;
 }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    padding-top: 4rem;
+  }
+  .hero-section {
+    display: grid;
+    margin-top: 2rem;
+  }
+  .hero-section__text {
+    margin-top: 2.4rem;
+  }
+  .hero-section__text h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+  .hero-section__text h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+  }
+  .hero-section__form {
+    width: 100%;
+    padding: 4rem 2.2rem;
+    margin-bottom: 2rem;
+    /* display: none; */
+  }
+  .sign-in {
+    text-align: center;
+  }
+
+}

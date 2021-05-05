@@ -1,5 +1,4 @@
 <template>
-    <!-- bind class to sidebar -->
     <aside class="sidebar">
         <div class="sidebar-wrapper">
             <div class="sidebar__header">
@@ -9,11 +8,6 @@
                     </span>
                     Wallet
                 </h1>
-                <div class="navBtn">
-                     <svg @click="$emit('close')" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9997 10.5862L16.9497 5.63623L18.3637 7.05023L13.4137 12.0002L18.3637 16.9502L16.9497 18.3642L11.9997 13.4142L7.04974 18.3642L5.63574 16.9502L10.5857 12.0002L5.63574 7.05023L7.04974 5.63623L11.9997 10.5862Z"/>
-                    </svg>
-                </div>
             </div>
             <div class="sidebar__menu">
                 <ul>
@@ -60,5 +54,5 @@
     </aside>
 </template>
 
-<script src="./Sidebar.js"></script>
-<style scoped src="./Sidebar.css"></style>
+<script src="./MobileSideBar.js"></script>
+<style scoped src="./MobileSideBar.css"></style>

@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <TransactionTable :transactions="paginatedTransactions" />
-                <Pagination :total="transactions.length" :perPage="perPage" @changePage="changeCurrentPage" :currentPage="currentPage"/>
+                <Pagination :totalPages="totalPages" :perPage="perPage" @changePage="changeCurrentPage" :currentPage="currentPage"/>
             </div>
         </div>
         <Modal modalName="Filter" :class="{open: filter}" @close="toggleFilterModal">
@@ -56,14 +56,10 @@
                             </div>
                             <div>
                                 <h3>Transaction Status</h3>
-                                <div class="status">
-                                    <div class="status-type">
-                                        <RadioBtn title="Successful" id="successful" value="successful" name="transaction-status"  />
-                                    </div>
-                                    <div  class="status-type">
-                                        <RadioBtn title="Failed" id="failed" value="failed" name="transaction-status"  />
-                                    </div>
-                                </div>
+                                <RadioBtn id="transactionStatus"
+                                :options="transactionStatus"
+                                name="transaction-status"
+                                v-model="status"/>
                             </div>
                             <CustomButton size="large">Apply Search</CustomButton>
                         </div>

@@ -4,6 +4,17 @@
     background-color: #0B2253;
     padding: 2rem 1.6rem;
     bottom: 0;
+    transition: 0.5s;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    /* overflow-x: hidden; */
+}
+.sidebar.open{
+    visibility: hidden;
+    opacity: 1;
+    width: 0px;
+    padding: 0;
 }
 .sidebar-wrapper {
     position: sticky;
@@ -65,3 +76,44 @@
 .sidebar__menu a:hover {
     color: #ffffff;
 }
+.navBtn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        height: 100%;
+        width: 24.8rem;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: none;
+        overflow-x: hidden;
+        /* transition: 0.5s; */
+        transition: all 300ms ease-in-out;
+    }
+    .sidebar.open {
+        position: absolute;
+        width: 0;
+        opacity: 1;
+        overflow-x: hidden;
+        /* transition: all 300ms ease-in-out; */
+    }
+    .sidebar__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navBtn  {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .navBtn path {
+        fill: #fff;
+    }
+  }

@@ -26,6 +26,18 @@ export default {
       currentPage: 1,
       perPage: 8,
       transactions: Transactions,
+      totalPages: 10,
+      status: 'successful',
+      transactionStatus: [
+        {
+          value: 'successful',
+          title: 'Successful',
+        },
+        {
+          value: 'failed',
+          title: 'Failed',
+        },
+      ],
     };
   },
   methods: {

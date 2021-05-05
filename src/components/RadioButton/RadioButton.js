@@ -1,21 +1,16 @@
+import inputMixin from '@/mixins/inputMixin';
+
 export default {
+  mixins: [inputMixin],
   name: 'Radio',
   props: {
-    title: {
-      type: String,
-      default: 'Naira',
-    },
-    value: {
-      type: String,
-      default: 'Naira',
-    },
-    name: {
-      type: String,
-      default: 'Currency',
-    },
     id: {
       type: String,
       default: 'Naira',
+    },
+    options: {
+      type: Array,
+      default: () => [],
     },
   },
 };

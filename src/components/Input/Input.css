@@ -11,13 +11,12 @@
   border: 1px solid #DEE3EB;
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.4rem;
   font-size: 16px;
   line-height: 16px;
   width: 100%;
   height: 4.8rem;
   padding: 1.6rem;
-  box-sizing: border-box;
   outline: none;
   color: #0B2253;
   margin-top: 8px;
@@ -31,15 +30,17 @@
 }
 .input__error {
     border: 1px solid #CA1B1B;
+    /* margin-bottom: 2rem; */
     /* outline: none; */
   }
 .invalid {
     font-size: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     color: #CA1B1B;
 }
 .input__error:focus {
     border: 1px solid #CA1B1B;
+    /* margin-bottom: 2rem; */
 }
 ::placeholder {
   font-weight: normal;
@@ -48,4 +49,17 @@
   align-items: center;
   letter-spacing: -0.05px;
   color: darkgrey;
+}
+
+/* small {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+} */
+
+@media screen and (max-width: 768px) {
+  .input {
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

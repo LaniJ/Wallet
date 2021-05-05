@@ -10,7 +10,7 @@ export default {
       type: Number,
       default: 1,
     },
-    total: {
+    totalPages: {
       type: Number,
       default: 1,
     },
@@ -19,8 +19,24 @@ export default {
     },
   },
   computed: {
-    totalPages() {
-      return Math.ceil(this.total / this.perPage);
+    lastPages() {
+      return this.currentPage >= this.totalPages - 1;
+    },
+    pageList() {
+      const { currentPage, totalPages, lastPages } = this;
+      let page;
+      if (lastPages) {
+        page = totalPages - 1;
+      } else if (currentPage === 1) {
+        page = 2;
+      } else {
+        page = currentPage;
+      }
+      return [
+        page - 1,
+        page,
+        page + 1,
+      ];
     },
   },
 };

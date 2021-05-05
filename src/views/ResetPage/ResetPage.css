@@ -39,3 +39,17 @@
     min-width: 404px;
     margin-top: 1.6rem;
 }
+
+@media screen and (max-width: 768px) {
+    .resetPassword-section__box {
+      width: 100%;
+      /* display: none; */
+    }
+    .box-text p {
+        font-size: 1.5rem;
+        min-width: 100%;
+    }
+    .box-text h4 {
+        font-size: 2.5rem;
+    }
+  }

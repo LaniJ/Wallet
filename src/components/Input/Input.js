@@ -1,10 +1,8 @@
+import inputMixin from '@/mixins/inputMixin';
+
 export default {
+  mixins: [inputMixin],
   name: 'FormInput',
-  data() {
-    return {
-      innerValue: '',
-    };
-  },
   props: {
     title: {
       type: String,
@@ -18,9 +16,6 @@ export default {
       type: String,
       default: 'John Doe',
     },
-    value: {
-      type: String,
-    },
     size: {
       type: String,
       default: 'large',
@@ -28,9 +23,6 @@ export default {
     hasError: {
       type: Boolean,
       default: false,
-    },
-    name: {
-      type: String,
     },
     rules: {
       type: String,
@@ -63,21 +55,5 @@ export default {
     checkError() {
       return `input__${this.hasError}`;
     },
-  },
-  watch: {
-    innerValue(val) {
-      this.$emit('input', val);
-      this.$emit('change', val);
-    },
-    value(val) {
-      if (val !== this.innerValue) {
-        this.innerValue = val;
-      }
-    },
-  },
-  created() {
-    if (this.value) {
-      this.innerValue = this.value;
-    }
   },
 };
