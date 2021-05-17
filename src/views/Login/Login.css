@@ -21,3 +21,10 @@
 .input-block {
   margin-bottom: 20px;
 }
+.invalid {
+  font-size: 14px;
+  display: flex;
+  margin-top: 10px;
+  color: #CA1B1B;
+  justify-content: center;
+}

@@ -12,13 +12,13 @@
         </thead>
         <tbody>
           <tr v-for="(row, index) in transactions" :key="index" class="table__row">
-            <td class="table__row__content">{{row.type}}</td>
+            <td class="table__row__content">{{`Wallet ${row.transaction_type}`}}</td>
             <td class="table__row__content margin">
-              {{ row.date }} |
+              {{row.transaction_date}} |
               <span class="time">{{ row.time }}</span>
             </td>
             <td class="table__row__content test">
-                <template v-if="row.status === 'Successful'">
+                <template v-if="row.transaction_status === 'Successful'">
                     <span class="successful">
                         <svg
                         width="12"

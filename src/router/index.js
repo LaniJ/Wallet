@@ -2,14 +2,25 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 
-import Signup from '../views/Signup';
-import Login from '../views/Login';
-import ForgotPassword from '../views/ForgotPassword';
-import ResetPassword from '../views/ResetPassword';
-import Otp from '../views/Otp';
-import ResetPage from '../views/ResetPage';
-import Dashboard from '../views/Dashboard';
-import Transactions from '../views/Transactions';
+// import Signup from '../views/Signup';
+// import Login from '../views/Login';
+// import ForgotPassword from '../views/ForgotPassword';
+// import ResetPassword from '../views/ResetPassword';
+// import Otp from '../views/Otp';
+// import ResetPage from '../views/ResetPage';
+// import Dashboard from '../views/Dashboard';
+// import Transactions from '../views/Transactions';
+
+const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue');
+const Signup = () => import(/* webpackChunkName: "signup" */ '../views/Signup');
+const Login = () => import(/* webpackChunkName: "login" */ '../views/Login');
+const ForgotPassword = () => import(/* webpackChunkName: "forgotPassword" */ '../views/ForgotPassword');
+const ResetPassword = () => import(/* webpackChunkName: "resetPassword" */ '../views/ResetPassword');
+const Otp = () => import(/* webpackChunkName: "otp" */ '../views/Otp');
+const Pin = () => import(/* webpackChunkName: "pin" */ '../views/Pin');
+const ResetPage = () => import(/* webpackChunkName: "ResetPage" */ '../views/ResetPage');
+const Dashboard = () => import(/* webpackChunkName: "dashboard" */ '../views/Dashboard');
+const Transactions = () => import(/* webpackChunkName: "transactions" */ '../views/Transactions');
 
 Vue.use(VueRouter);
 
@@ -25,7 +36,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: About,
   },
   {
     path: '/signup',
@@ -43,7 +54,7 @@ const routes = [
     component: ForgotPassword,
   },
   {
-    path: '/reset',
+    path: '/resetForm',
     name: 'ResetPassword',
     component: ResetPassword,
   },
@@ -51,6 +62,11 @@ const routes = [
     path: '/otp',
     name: 'Otp',
     component: Otp,
+  },
+  {
+    path: '/pin',
+    name: 'Pin',
+    component: Pin,
   },
   {
     path: '/resetpassword',

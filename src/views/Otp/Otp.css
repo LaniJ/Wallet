@@ -44,4 +44,21 @@
     letter-spacing: -0.05px;
     color: darkgrey;
   }
+  input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.invalid {
+    font-size: 14px;
+    display: flex;
+    margin-top: 10px;
+    color: #CA1B1B;
+    justify-content: center;
+}
+.loader {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
   

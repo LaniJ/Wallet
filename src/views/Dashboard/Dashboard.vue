@@ -12,7 +12,7 @@
             </div>
             <div class="page-header__bottomContent">
                 <div>
-                    <h3 class="page-header__text2">Hello John 👋🏿 </h3>
+                    <h3 class="page-header__text2">Hello {{ currentUser.username }} 👋🏿 </h3>
                 </div>
                 <div class="page-header__buttons">
                     <CustomButton :color="'blue-outline'" class="gap" @click="toggleTransferModal">Transfer Funds</CustomButton>
@@ -28,7 +28,7 @@
             </div>
             <section class="balance-section">
                 <div class="balance-section__naira">
-                    <h3>₦00.00</h3>
+                    <h3>₦ {{ nairaBalance }}.00 </h3>
                     <small class="balance-type">Naira Balance</small>
                 </div>
                 <div class="balance-section__naira">
@@ -36,9 +36,19 @@
                     <small class="balance-type">Dollar Balance</small>
                 </div>
             </section>
-            <div class="table-section">
+            <div class="table-section" v-if="transactionExists">
                 <h3>Recent Transactions</h3>
+                <!-- here -->
                 <TransactionTable :transactions="dashboardTransactions"/>
+            </div>
+            <div v-else class="transaction-section">
+                <h3>Transaction History</h3>
+                <div class="table-section__empty">
+                    <div class="table-section__empty__image" >
+                        <img src="@/assets/folder.svg" alt="">
+                    </div>
+                    <h3>No Transactions</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -53,9 +63,30 @@
                 <div>
                     <form action="" @submit.prevent="">
                         <div class="form">
-                            <CustomInput :title="'Account Number'" :placeholder="'23456788901'" :type="'tel'" />
-                            <CustomInput :title="'Amount'" :placeholder="'₦ 00.00'" :type="'tel'" />
-                            <CustomButton size="large" class="btn-media">Transfer</CustomButton>
+                            <CustomInput
+                                title="Recipient's Username"
+                                placeholder="Jane Doe"
+                                type="text"
+                                @blur="validateRecipient"
+                                v-model="form.recipientUsername"
+                            />
+                            <CustomInput
+                                title="Amount"
+                                placeholder="₦ 00.00"
+                                type="tel"
+                                v-model="form.amount"
+                            />
+                            <CustomInput
+                                title="Pin"
+                                placeholder="****"
+                                type="password"
+                                v-model="form.pin"
+                            />
+                            <CustomButton
+                                size="large"
+                                class="btn-media">
+                                Transfer
+                            </CustomButton>
                         </div>
                     </form>
                 </div>
@@ -70,10 +101,22 @@
                 name="transactionCurrency"
                 v-model="currencyOption"/>
                 <div>
-                    <form action="" @submit.prevent="">
+                    <form action="" @submit.prevent="addToWallet">
                         <div class="form">
-                            <CustomInput title="Amount" placeholder="₦ 00.00" type="tel" />
-                            <CustomButton size="large" class="btn-media">Fund Wallet</CustomButton>
+                            <CustomInput
+                                title="Amount"
+                                placeholder="₦ 00.00"
+                                type="tel"
+                                v-model="form.amount" />
+
+                            <CustomButton
+                                size="large"
+                                class="btn-media">
+                                    <Loader v-if="isLoading"/>
+                                    <span v-else>Fund Wallet</span>
+                            </CustomButton>
+
+                            <small class="invalid"> {{ errorMsg }}</small>
                         </div>
                     </form>
                 </div>

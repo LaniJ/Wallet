@@ -50,6 +50,11 @@
   letter-spacing: -0.05px;
   color: darkgrey;
 }
+input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /* small {
   margin-bottom: 50px;

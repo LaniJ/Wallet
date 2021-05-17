@@ -32,11 +32,7 @@
     background: rgba(47, 46, 128, 0.1);
     border-radius: 2px;
 }
-/* .footer-text.active{
-    color: #2F2E80;
-    background: rgba(47, 46, 128, 0.1);
-    border-radius: 2px;
-} */
+
 .ellipsis {
     color: #677684;
     margin-right: 0.8rem;
